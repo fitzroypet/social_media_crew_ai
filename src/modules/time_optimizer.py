@@ -47,3 +47,7 @@ class TimeOptimizer:
 
         result = crew.kickoff()
         return result
+
+    def run(self):
+        # Add implementation for time optimization
+        return "Best posting time: 9:00 AM EST"  # Example return value

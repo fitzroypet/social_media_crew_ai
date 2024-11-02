@@ -45,4 +45,4 @@ class ContentGenerator:
         )
 
         result = crew.kickoff()
-        return result
+        return result.raw

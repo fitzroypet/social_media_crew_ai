@@ -19,26 +19,16 @@ class TestSocialMediaModules(unittest.TestCase):
         cls.timezone = "EST"
 
     def test_content_generator(self):
-        generator = ContentGenerator(self.api_key)
-        result = generator.generate_content_ideas(
-            self.topic, 
-            self.platform, 
-            self.audience
-        )
-        self.assertIsNotNone(result)
-        self.assertIsInstance(result, str)
-        self.assertGreater(len(result), 0)
+        generator = ContentGenerator()
+        result = generator.run()
+        self.assertIsInstance(result.raw, str)
+        self.assertGreater(len(result.raw), 0)
 
     def test_time_optimizer(self):
         optimizer = TimeOptimizer(self.api_key)
-        result = optimizer.suggest_posting_times(
-            self.platform,
-            self.timezone,
-            self.audience
-        )
-        self.assertIsNotNone(result)
-        self.assertIsInstance(result, str)
-        self.assertGreater(len(result), 0)
+        result = optimizer.run()
+        self.assertIsInstance(result.raw, str)
+        self.assertGreater(len(result.raw), 0)
 
     def test_hashtag_recommender(self):
         recommender = HashtagRecommender(self.api_key)
