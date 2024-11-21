@@ -1,4 +1,4 @@
-# Social Media Strategy Assistant 🚀
+# AI Agent for Social Media Strategy 🚀
 
 A powerful AI-powered tool that helps create comprehensive social media strategies, including content ideas, optimal posting times, and hashtag recommendations.
 
